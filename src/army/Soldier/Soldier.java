@@ -1,6 +1,8 @@
 package army.Soldier;
 
-public abstract class Soldier {
+import army.type.*;
+
+public abstract class Soldier implements Attack, Adaptable, Defence, Insidious, Magician {
 
     private final String name;
 
@@ -30,4 +32,24 @@ public abstract class Soldier {
         this.damage = damage;
     }
     public abstract void reportItself();
+
+    @Override
+    public void doAttack() {
+
+    }
+
+    @Override
+    public void doDefence() {
+
+    }
+
+    @Override
+    public void beBad() {
+
+    }
+
+    @Override
+    public void doMagic() {
+
+    }
 }

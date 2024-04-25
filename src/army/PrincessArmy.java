@@ -19,6 +19,34 @@ public class PrincessArmy {
         for (Soldier soldier: soldiers) {
             soldier.reportItself();
         }
-
     }
+    public void attack() {
+        System.out.println("---------ATTACK--------");
+        for (Soldier soldier : soldiers) {
+             soldier.doAttack();
+        }
+    }
+    public void defence() {
+        System.out.println("---------DEFENCE--------");
+        for (Soldier soldier : soldiers) {
+            soldier.doDefence();
+        }
+    }
+
+    public void doMagic() {
+        System.out.println("---------MAGIC ATTACK--------");
+        for (Soldier soldier : soldiers) {
+            soldier.doMagic();
+        }
+    }
+    public void beBad() {
+        System.out.println("---------BAD LUCK--------");
+        for (Soldier soldier : soldiers) {
+            soldier.beBad();
+        }
+    }
+
+
+
+
 }
