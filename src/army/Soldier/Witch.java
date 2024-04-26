@@ -22,6 +22,11 @@ public class Witch extends Soldier implements Defence, Magician, Attack {
     }
 
     @Override
+    public void doAttack() {
+        System.out.println( super.getName() + " deals " + super.getDamage() + " damage.");
+    }
+
+    @Override
     public void doDefence() {
         System.out.println( super.getName() + " deals " + super.getDamage() + " damage.");
 
@@ -33,8 +38,5 @@ public class Witch extends Soldier implements Defence, Magician, Attack {
 
     }
 
-    @Override
-    public void doAttack() {
-        System.out.println( super.getName() + " deals " + super.getDamage() + " damage.");
-    }
+
 }

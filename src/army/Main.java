@@ -21,19 +21,24 @@ public class Main {
         princessArmy.addSoldier(warrior1);
         princessArmy.addSoldier(warrior2);
 
+        System.out.println("---------PRINCESS ARMY---------");
+        System.out.println();
+
         princessArmy.report();
 
         System.out.println();
         princessArmy.attack();
 
         System.out.println();
-        princessArmy.defence();
+        princessArmy.doDefence();
+
+        System.out.println();
+        princessArmy.beBad();
 
         System.out.println();
         princessArmy.doMagic();
 
-        System.out.println();
-        princessArmy.beBad();
+
 
 
 

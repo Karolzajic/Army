@@ -16,16 +16,13 @@ public class Warrior extends Soldier implements Attack, Adaptable, Insidious {
 
     }
 
-
     @Override
     public void doAttack() {
-        System.out.println( super.getName() + " deals " + super.getDamage() + " damage.");
 
     }
 
     @Override
     public void beBad() {
-        System.out.println( super.getName() +" use "+ super.getSuperPower() + " to make every enemies poop");
 
     }
 }

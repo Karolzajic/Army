@@ -1,6 +1,9 @@
 package army;
 
 import army.Soldier.Soldier;
+import army.type.Attack;
+import army.type.Defence;
+import army.type.Insidious;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,30 +26,45 @@ public class PrincessArmy {
     public void attack() {
         System.out.println("---------ATTACK--------");
         for (Soldier soldier : soldiers) {
-             soldier.doAttack();
+            if (soldier instanceof Attack) {
+                System.out.println(soldier.getName() + " deals " + soldier.getDamage() + " damage.");
+            }
         }
-    }
-    public void defence() {
-        System.out.println("---------DEFENCE--------");
-        for (Soldier soldier : soldiers) {
-            soldier.doDefence();
-        }
+
     }
 
-    public void doMagic() {
-        System.out.println("---------MAGIC ATTACK--------");
-        for (Soldier soldier : soldiers) {
-            soldier.doMagic();
-        }
-    }
-    public void beBad() {
+    public void beBad(){
         System.out.println("---------BAD LUCK--------");
-        for (Soldier soldier : soldiers) {
-            soldier.beBad();
+        for (Soldier soldier: soldiers){
+            if (soldier instanceof Insidious){
+                System.out.println( soldier.getName() +" use "+ soldier.getSuperPower() + " to make every enemies poop.");
+
+            }
         }
     }
 
+    public void doDefence(){
+        System.out.println("---------DEFENCE--------");
+        for (Soldier soldier: soldiers){
+            if (soldier instanceof Defence){
+                System.out.println(soldier.getName() + " deals " + soldier.getDamage() + " damage.");
+            }
+        }
+    }
+
+    public void doMagic (){
+        System.out.println("---------MAGIC ATTACK--------");for (Soldier soldier: soldiers){
+            if (soldier instanceof Defence){
+                System.out.println(soldier.getName() + " uses " + soldier.getSuperPower() + " and turning enemy to the stone for 10 minutes and heals her allies.");
+            }
+        }
+    }
 
 
 
 }
+
+
+
+
+

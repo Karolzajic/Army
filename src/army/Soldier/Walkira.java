@@ -16,7 +16,6 @@ public class Walkira extends Soldier implements Attack {
 
     @Override
     public void doAttack() {
-        System.out.println( super.getName() + " deals " + super.getDamage() + " damage");
-
+        System.out.println( super.getName() + " deals " + super.getDamage() + " damage.") ;
     }
 }
