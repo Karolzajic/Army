@@ -4,6 +4,7 @@ import army.Soldier.Soldier;
 import army.type.Attack;
 import army.type.Defence;
 import army.type.Insidious;
+import army.type.Magician;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,7 +28,7 @@ public class PrincessArmy {
         System.out.println("---------ATTACK--------");
         for (Soldier soldier : soldiers) {
             if (soldier instanceof Attack) {
-                System.out.println(soldier.getName() + " deals " + soldier.getDamage() + " damage.");
+                ((Attack) soldier).doAttack();
             }
         }
 
@@ -37,7 +38,7 @@ public class PrincessArmy {
         System.out.println("---------BAD LUCK--------");
         for (Soldier soldier: soldiers){
             if (soldier instanceof Insidious){
-                System.out.println( soldier.getName() +" use "+ soldier.getSuperPower() + " to make every enemies poop.");
+               ((Insidious) soldier).beBad();
 
             }
         }
@@ -47,15 +48,15 @@ public class PrincessArmy {
         System.out.println("---------DEFENCE--------");
         for (Soldier soldier: soldiers){
             if (soldier instanceof Defence){
-                System.out.println(soldier.getName() + " deals " + soldier.getDamage() + " damage.");
+                ((Defence) soldier).doDefence();
             }
         }
     }
 
     public void doMagic (){
         System.out.println("---------MAGIC ATTACK--------");for (Soldier soldier: soldiers){
-            if (soldier instanceof Defence){
-                System.out.println(soldier.getName() + " uses " + soldier.getSuperPower() + " and turning enemy to the stone for 10 minutes and heals her allies.");
+            if (soldier instanceof Magician){
+                ((Magician) soldier).doMagic();
             }
         }
     }
